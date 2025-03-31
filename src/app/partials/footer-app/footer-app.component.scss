@@ -1,0 +1,40 @@
+.footer-app{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pdp-tyc {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  background-color: #000000;
+  gap: 20px;
+}
+
+.txt-links{
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 1;
+}
+
+.img-footer {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copy {
+  color: #000000;
+  margin-bottom: 5px;
+  font-size: 12px;
+  opacity: 1;
+}
+
+.liston-img{
+  width: 56px;
+  height: 28px;
+}
