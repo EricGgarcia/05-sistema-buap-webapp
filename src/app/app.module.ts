@@ -25,6 +25,7 @@ import { LeftSidebarComponent } from './partials/left-sidebar/left-sidebar.compo
 import { HeaderAppComponent } from './partials/header-app/header-app.component';
 import { FooterAppComponent } from './partials/footer-app/footer-app.component';
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
+import { HComponent } from './screens/h/h.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { HomeScreenComponent } from './screens/home-screen/home-screen.component
     LeftSidebarComponent,
     HeaderAppComponent,
     FooterAppComponent,
-    HomeScreenComponent
+    HomeScreenComponent,
+    HComponent
   ],
   imports: [
     BrowserModule,
