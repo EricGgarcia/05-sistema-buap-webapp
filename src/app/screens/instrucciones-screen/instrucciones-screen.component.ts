@@ -16,4 +16,6 @@ export class InstruccionesScreenComponent implements OnInit{
       return "interior-normal";
     }
   }
+
+  registrarCodigo(){}
 }
