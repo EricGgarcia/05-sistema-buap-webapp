@@ -6,8 +6,7 @@ import * as $ from "jquery";
 @Component({
   selector: 'app-registro-screen',
   templateUrl: './registro-screen.component.html',
-  styleUrls: ['./registro-screen.component.scss'],
-  standalone:false
+  styleUrls: ['./registro-screen.component.scss']
 })
 export class RegistroScreenComponent implements OnInit{
 //Variables
