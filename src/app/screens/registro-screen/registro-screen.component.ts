@@ -42,7 +42,7 @@ public llenarArrayEdades(){
 }
 
 public terminosCondiciones(){
-
+  this.router.navigate(["terminos-condiciones"]);
 }
 
 public registrar(){
