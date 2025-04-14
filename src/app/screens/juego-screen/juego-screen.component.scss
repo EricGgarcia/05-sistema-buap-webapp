@@ -1,0 +1,18 @@
+
+.img-close{
+  height: 912px;
+  width: 415px;
+  cursor: pointer!important;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  overflow-x: scroll!important;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}

@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-instrucciones-screen',
-  templateUrl: './instrucciones-screen.component.html',
-  styleUrls: ['./instrucciones-screen.component.scss']
+  selector: 'app-juego-terminado-screen',
+  templateUrl: './juego-terminado-screen.component.html',
+  styleUrls: ['./juego-terminado-screen.component.scss']
 })
-export class InstruccionesScreenComponent implements OnInit{
-  constructor(private router: Router){
-  }
+export class JuegoTerminadoScreenComponent implements OnInit{
+  constructor(private router: Router){}
   ngOnInit(): void {}
 
   public isMobile(){
@@ -19,7 +18,7 @@ export class InstruccionesScreenComponent implements OnInit{
     }
   }
 
-  jugarAhora(){
-    this.router.navigate(["nuevo-look"]);
+  irInicio(){
+    this.router.navigate(["home"]);
   }
 }

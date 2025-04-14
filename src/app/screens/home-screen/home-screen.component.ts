@@ -83,7 +83,6 @@ export class HomeScreenComponent implements OnInit{
   }
 
   public jugarParticipacion(codigo: any){
-
     //Guardamos el código en las cookies porque se usará para validar las participaciones del juego
     this.router.navigate(["instrucciones-juego"]);
   }

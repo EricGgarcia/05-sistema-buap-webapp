@@ -34,6 +34,14 @@
   padding-bottom: 2rem;
 }
 
+.interior-normal{
+  max-width: 40%;
+}
+
+.interior-mobile{
+  width: 100%;
+}
+
 .line-color{
   display: flex;
   flex-direction: row;
@@ -72,34 +80,18 @@
   align-items: center;
   width: 100%;
   // max-width: 40%;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   padding-bottom: 2rem;
 }
-
-.mdc-button{
-  background: #CD0000 0% 0% no-repeat padding-box;
+.txt-slogan{
+  text-align: center;
+  font-family: Avenir;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #000000;
   opacity: 1;
-  width: 188px;
-  height: 40px;
-  border-radius: 0;
-  gap: 1rem;
-  //Fuente
-  .text-btn{
-      text-align: center;
-      font-family: Avenir;
-      font-size: 16px;
-      letter-spacing: 0.8px;
-      color: #FFFFFF;
-      text-transform: uppercase;
-      opacity: 1;
-  }
 }
-
-.mat-flat-button.mat-primary.mat-button-disabled, .mat-flat-button.mat-accent.mat-button-disabled, .mat-flat-button.mat-warn.mat-button-disabled, .mat-flat-button.mat-button-disabled.mat-button-disabled, .mat-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-accent.mat-button-disabled, .mat-raised-button.mat-warn.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled, .mat-fab.mat-primary.mat-button-disabled, .mat-fab.mat-accent.mat-button-disabled, .mat-fab.mat-warn.mat-button-disabled, .mat-fab.mat-button-disabled.mat-button-disabled, .mat-mini-fab.mat-primary.mat-button-disabled, .mat-mini-fab.mat-accent.mat-button-disabled, .mat-mini-fab.mat-warn.mat-button-disabled, .mat-mini-fab.mat-button-disabled.mat-button-disabled {
-  background: #CD0000 0% 0% no-repeat padding-box;
-}
-
 
 //Codigos registrados
 .codigos-registrados{
@@ -107,17 +99,22 @@
   padding-bottom: 3rem;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
+  //background: #7A7A7A1F 0% 0% no-repeat padding-box;
+  letter-spacing: 0px;
+  padding-bottom: 2rem;
   width: 100%;
 
 .table{
   min-width: 352px;
   .head-table{
       text-align: left;
-      //font-family: Avenir;
+      font-family: Avenir;
       font-size: 16px;
       letter-spacing: 0px;
       color: #000000;
@@ -140,54 +137,9 @@
 td{
   vertical-align: middle;
   height:60px;
+  background: #7A7A7A1F 0% 0% no-repeat padding-box;
 }
+th{
+  background: #7A7A7A1F 0% 0% no-repeat padding-box;
 }
-
-.subtitle{
-  width: 100%;
-  text-align: left;
-  font-family: Avenir-Bold;
-  color: #000000;
-  opacity: 1;
-  font-size: 16px;
-  letter-spacing: 0px;
-}
-
-.section-codigo{
-  padding-top: 3rem;
-  padding-bottom: 4rem;
-  opacity: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  .interior-codigos{
-      max-width: 100%;
-  }
-}
-
-.txt-links{
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 3rem;
-  font-size: 16px;
-  text-align: left;
-  font-family: Avenir;
-  letter-spacing: 0px;
-  gap: 1.5rem;
-  color: #000000;
-  opacity: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.text-lorem{
-  font-family: Avenir;
-  text-align: left;
-  font-size: 18.5px;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
 }

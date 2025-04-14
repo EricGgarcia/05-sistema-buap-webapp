@@ -9,10 +9,7 @@ export class HeaderAppComponent implements OnInit{
   @Output() drawer = new EventEmitter();
 
   constructor(){}
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   drawerOpen(){
     this.drawer.emit();

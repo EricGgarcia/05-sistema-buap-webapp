@@ -46,9 +46,8 @@ export class LoginScreenComponent implements OnInit{
     this.router.navigate(["home"]);
   }
 
-  public recuperarPwd(){
-
-  }
+  //SIN IMPLEMENTAR
+  public recuperarPwd(){}
 
   public goRegistro(){
     this.router.navigate(["registro"]);

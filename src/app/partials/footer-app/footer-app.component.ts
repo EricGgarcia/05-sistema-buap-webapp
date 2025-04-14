@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,13 +8,10 @@ import { Router } from '@angular/router';
 })
 export class FooterAppComponent implements OnInit{
 
-  constructor(
-    private router: Router
-  ){}
+  @Input() pantalla:string= "";
 
-  ngOnInit(): void {
-
-  }
+  constructor(private router: Router){}
+  ngOnInit(): void {}
 
   public terminosCondiciones(){
     this.router.navigate(["terminos-condiciones"]);

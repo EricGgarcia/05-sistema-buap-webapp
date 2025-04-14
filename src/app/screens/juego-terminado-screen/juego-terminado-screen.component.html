@@ -1,0 +1,60 @@
+<section class="juego-terminado">
+  <div class="wrapper">
+    <mat-drawer-container>
+      <mat-drawer #drawer mode='over' position="start">
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+      </mat-drawer>
+      <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+
+      <!-- Sección del body donde se muestra todo el contenido -->
+      <div class="body-home">
+
+        <!-- Sección del eslogan y contenido -->
+        <div class="section-eslogan">
+          <div class="eslogan {{isMobile()}}">
+              <div class="line-color">
+                  <div class="vertical-line" style="height: 111px;"></div>
+              </div>
+              <div class="title-link">
+                  <span>¡Excelente carrera!</span>
+              </div>
+          </div>
+          <div class="linescolor">
+            <div class="verticalline"></div>
+        </div>
+        </div>
+
+        <div class="puntaje">
+          <span class="title-pnt">Obtuviste</span>
+          <span class="txt-pnt-black">1400</span>
+          <span class="txt-pnt">puntos</span>
+        </div>
+
+        <div class="num-bases">
+          <span class="txt-normal">
+            Gracias por participar, acumula más puntos y gana una increíble&nbsp;<span class="txt-bold">Ducati Scrambler</span>&nbsp;.
+          </span>
+        </div>
+
+        <!-- Botón para registrar código -->
+        <div class="section-codigo">
+          <div class="{{isMobile()}}">
+            <div class="registra-codigo">
+
+              <!-- Botón para registrar código -->
+              <div class="d-flex flex-direction-row justify-content-center w-100 mt-3 mb-3">
+                <button mat-flat-button color="warn" class="btn-login" (click)="irInicio()">
+                    <span class="text-btn">Ir al inicio</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <app-footer-app></app-footer-app>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>
+</section>

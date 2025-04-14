@@ -7,6 +7,11 @@ import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/
 import { PoliticasPrivacidadScreenComponent } from './screens/politicas-privacidad-screen/politicas-privacidad-screen.component';
 import { TerminosCondicionesScreenComponent } from './screens/terminos-condiciones-screen/terminos-condiciones-screen.component';
 import { InstruccionesScreenComponent } from './screens/instrucciones-screen/instrucciones-screen.component';
+import { NuevoLookScreenComponent } from './screens/nuevo-look-screen/nuevo-look-screen.component';
+import { PerfilUsuarioScreenComponent } from './screens/perfil-usuario-screen/perfil-usuario-screen.component';
+import { TiendasScreenComponent } from './screens/tiendas-screen/tiendas-screen.component';
+import { JuegoTerminadoScreenComponent } from './screens/juego-terminado-screen/juego-terminado-screen.component';
+import { JuegoScreenComponent } from './screens/juego-screen/juego-screen.component';
 
 const routes: Routes = [
   { path: '', component:LoginScreenComponent , pathMatch:'full' },
@@ -16,6 +21,13 @@ const routes: Routes = [
   { path: 'politicas-privacidad', component: PoliticasPrivacidadScreenComponent, pathMatch: 'full' },
   { path: 'terminos-condiciones', component: TerminosCondicionesScreenComponent, pathMatch: 'full' },
   { path: 'instrucciones', component: InstruccionesScreenComponent, pathMatch: 'full' },
+  { path: 'nuevo-look', component: NuevoLookScreenComponent, pathMatch: 'full' },
+  { path: 'juego-terminado', component: JuegoTerminadoScreenComponent, pathMatch: 'full' },
+  { path: 'juego', component: JuegoScreenComponent, pathMatch: 'full' },
+
+  //
+  { path: 'perfil-usuario', component: PerfilUsuarioScreenComponent, pathMatch: 'full' },
+  { path: 'tiendas', component: TiendasScreenComponent, pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -1,0 +1,47 @@
+<section class="tiendas">
+  <div class="wrapper">
+    <mat-drawer-container>
+      <mat-drawer #drawer mode='over' position="start">
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+      </mat-drawer>
+      <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+
+      <!-- Sección del body donde se muestra todo el contenido -->
+      <div class="body-home">
+
+        <!-- Sección del eslogan y contenido -->
+        <div class="section-eslogan">
+          <div class="eslogan {{isMobile()}}">
+              <div class="line-color">
+                  <div class="vertical-line" style="height: 111px;"></div>
+              </div>
+              <div class="title-link">
+                  <span>Tiendas participantes</span>
+              </div>
+          </div>
+
+          <!-- 5. Sección de códigos registrados -->
+        <div class="codigos-registrados">
+          <div>
+              <table class="table table-responsive">
+                  <thead class="head-table">
+                    <tr>
+                      <th scope="col" class="text-lorem text-align: center;">Liverpool</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="tr-table" *ngFor="let tienda of tiendas; let i=index">
+                      <td style="min-width: 100px; text-align: left;">{{i+1}}. {{tienda}}</td>
+                  </tbody>
+              </table>
+          </div>
+        </div>
+
+        </div>
+        <div class="footer">
+          <app-footer-app></app-footer-app>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+<section class="perfil-usuario">
+  <div class="wrapper">
+    <mat-drawer-container>
+      <mat-drawer #drawer mode='over' position="start">
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+      </mat-drawer>
+      <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+
+      <!-- Sección del body donde se muestra todo el contenido -->
+      <div class="body-home">
+
+        <!-- Sección del eslogan y contenido -->
+        <div class="section-eslogan">
+          <div class="eslogan {{isMobile()}}">
+              <div class="line-color">
+                  <div class="vertical-line" style="height: 111px;"></div>
+              </div>
+              <div class="title-link">
+                  <span>Perfil de usuario</span>
+              </div>
+          </div>
+        </div>
+
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>EricGG</mat-card-title>
+            <mat-card-subtitle>&#64;ericgg2002</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="/assets/images/header-img.png" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>&nbsp;<span class="txt-bold">Nombre</span>&nbsp;: Eric Garcia Gonzalez</p>
+            <p>&nbsp;<span class="txt-bold">Correo Electronico</span>&nbsp;: Erick.Garcia.Gonzalez12&#64;gmail.com</p>
+            <p>&nbsp;<span class="txt-bold">Telefono</span>&nbsp;: 222-659-2688</p>
+            <p>&nbsp;<span class="txt-bold">Ciudad</span>&nbsp;: Ciudad De Puebla</p>
+            <p>&nbsp;<span class="txt-bold">Edad</span>&nbsp;: 23 Años</p>
+          </mat-card-content>
+        </mat-card>
+
+        <div class="footer">
+          <app-footer-app></app-footer-app>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>
+</section>

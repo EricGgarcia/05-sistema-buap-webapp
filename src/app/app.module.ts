@@ -15,6 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
 
 //Para usar el mask
 import {NgxMaskDirective, provideNgxMask} from 'ngx-mask';
@@ -29,6 +30,11 @@ import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/
 import { PoliticasPrivacidadScreenComponent } from './screens/politicas-privacidad-screen/politicas-privacidad-screen.component';
 import { TerminosCondicionesScreenComponent } from './screens/terminos-condiciones-screen/terminos-condiciones-screen.component';
 import { InstruccionesScreenComponent } from './screens/instrucciones-screen/instrucciones-screen.component';
+import { NuevoLookScreenComponent } from './screens/nuevo-look-screen/nuevo-look-screen.component';
+import { PerfilUsuarioScreenComponent } from './screens/perfil-usuario-screen/perfil-usuario-screen.component';
+import { TiendasScreenComponent } from './screens/tiendas-screen/tiendas-screen.component';
+import { JuegoTerminadoScreenComponent } from './screens/juego-terminado-screen/juego-terminado-screen.component';
+import { JuegoScreenComponent } from './screens/juego-screen/juego-screen.component';
 
 
 @NgModule({
@@ -44,6 +50,11 @@ import { InstruccionesScreenComponent } from './screens/instrucciones-screen/ins
     PoliticasPrivacidadScreenComponent,
     TerminosCondicionesScreenComponent,
     InstruccionesScreenComponent,
+    NuevoLookScreenComponent,
+    PerfilUsuarioScreenComponent,
+    TiendasScreenComponent,
+    JuegoTerminadoScreenComponent,
+    JuegoScreenComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +71,8 @@ import { InstruccionesScreenComponent } from './screens/instrucciones-screen/ins
     MatSelectModule,
     MatCheckboxModule,
     NgxMaskDirective,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule
   ],
   providers: [
     provideNgxMask()

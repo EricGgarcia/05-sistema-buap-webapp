@@ -11,21 +11,15 @@ export class LeftSidebarComponent implements OnInit{
   @Output() cerrar = new EventEmitter();
   public isLogin: boolean = true;
 
-  constructor(
-    private router: Router
-  ){}
-
-  ngOnInit(): void {
-
-  }
+  constructor(private router: Router){}
+  ngOnInit(): void {}
 
   public cerrar_drawer(){
     this.cerrar.emit();
   }
 
-  public iniciarSesion(){
-
-  }
+  //SIN IMPLEMENTAR
+  public iniciarSesion(){}
 
   public goInicio(){
     this.router.navigate(["home"]);
@@ -36,7 +30,11 @@ export class LeftSidebarComponent implements OnInit{
   }
 
   public goTiendasParticipantes(){
+    this.router.navigate(["tiendas"]);
+  }
 
+  public goPerfilUsuarios(){
+    this.router.navigate(["perfil-usuario"]);
   }
 
   public logout(){
