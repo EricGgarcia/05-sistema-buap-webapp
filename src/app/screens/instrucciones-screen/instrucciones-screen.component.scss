@@ -34,6 +34,14 @@
   padding-bottom: 2rem;
 }
 
+.interior-normal{
+  max-width: 40%;
+}
+
+.interior-mobile{
+  width: 100%;
+}
+
 .line-color{
   display: flex;
   flex-direction: row;
@@ -63,6 +71,24 @@
   color: #000000;
   opacity: 1;
   text-transform: uppercase;
+}
+
+.txt-slogan{
+  text-align: center;
+  font-family: Avenir;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.text-lorem{
+  font-family: Avenir;
+  text-align: left;
+  font-size: 17px;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
 }
 
 .sect-lorem{
