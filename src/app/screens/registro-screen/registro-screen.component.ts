@@ -1,7 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
-import { UsuariosService } from 'src/app/services/usuarios.service';
 import { Router } from '@angular/router';
-import * as $ from "jquery";
+import { FacadeService } from 'src/app/services/facade.service';
+import { UsuariosService } from 'src/app/services/usuarios.service';
+declare var $:any;
 
 @Component({
   selector: 'app-registro-screen',
@@ -9,74 +11,104 @@ import * as $ from "jquery";
   styleUrls: ['./registro-screen.component.scss']
 })
 export class RegistroScreenComponent implements OnInit{
-//Variables
-public user:any = {};
-public errors:any = {};
 
-//Para contraseña
-public hide_1: boolean = false;
-public inputType_1: string = 'password';
+  //Variables
+  public user:any = {};
+  public errors:any = {};
+  public isLoading:boolean = false;
 
-//Para las edades
-public selectedValue: string = "";
-public edades: any[] = [];
+  //Para contraseña
+  public hide_1: boolean = false;
+  public inputType_1: string = 'password';
 
-constructor(
-  private usuariosService: UsuariosService,
-  private router: Router
-){}
+  //Para las edades
+  public selectedValue: string = "";
+  public edades: any[] = [];
 
-ngOnInit(): void {
-  this.user = this.usuariosService.esquemaUser();
-  this.llenarArrayEdades();
+  constructor(
+    private usuariosService: UsuariosService,
+    private facadeService:FacadeService,
+    private router: Router
+  ){}
 
-  console.log("Mi usuario es: ", this.user);
+  ngOnInit(): void {
+    this.user = this.usuariosService.esquemaUser();
+    this.llenarArrayEdades();
 
-}
+    console.log("Mi usuario es: ", this.user);
 
-public llenarArrayEdades(){
-  for (let i = 18; i <= 80; i++) {
-    this.edades.push({value: i});
   }
-}
 
-public terminosCondiciones(){
-  this.router.navigate(["terminos-condiciones"]);
-}
-
-public registrar(){
-  //Validar
-  this.errors = [];
-
-  this.errors = this.usuariosService.validarUsuario(this.user);
-  if(!$.isEmptyObject(this.errors)){
-    return false;
+  public llenarArrayEdades(){
+    for (let i = 18; i <= 80; i++) {
+      this.edades.push({value: i});
+    }
   }
-  //TODO:Aquí va la lógica para registrar usuario.
-  this.router.navigate(["home"]);
-}
 
-public goLogin(){
-  this.router.navigate([""]);
-}
+  public terminosCondiciones(){
 
-showPassword()
-{
-  if(this.inputType_1 == 'password'){
-    this.inputType_1 = 'text';
-    this.hide_1 = true;
   }
-  else{
-    this.inputType_1 = 'password';
-    this.hide_1 = false;
-  }
-}
 
-public isMobile(){
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(navigator.userAgent)){
-    return true;
-  }else{
-    return false;
+  public registrar(){
+    //Validar
+    this.errors = [];
+
+    this.errors = this.usuariosService.validarUsuario(this.user);
+    if(!$.isEmptyObject(this.errors)){
+      return false;
+    }
+    //Aquí vamos a registrar
+    if(this.user.terminos_condiciones){
+      this.isLoading = true;
+      this.facadeService.registrarUser(this.user).subscribe(
+        (response)=>{
+          alert("Usuario registrado correctamente")
+          //this.loginUser(this.user.email, this.user.password);
+        }, (error)=>{
+          alert("No se pudo iniciar sesión");
+          this.isLoading = false;
+        }
+      );
+    }else{
+      alert("Por favor acepta los términos y condiciones");
+    }
+    this.router.navigate(["home"]);
   }
-}
+
+  public loginUser(username: string, password: string){
+    this.facadeService.login(username, password).subscribe(
+      (response)=>{
+        this.facadeService.saveUserData(response);
+        this.router.navigate(["home"]);
+        this.isLoading = false;
+      }, (error)=>{
+        alert("No se pudo iniciar sesión");
+        this.isLoading = false;
+      }
+    );
+  }
+
+  public goLogin(){
+    this.router.navigate([""]);
+  }
+
+  showPassword()
+  {
+    if(this.inputType_1 == 'password'){
+      this.inputType_1 = 'text';
+      this.hide_1 = true;
+    }
+    else{
+      this.inputType_1 = 'password';
+      this.hide_1 = false;
+    }
+  }
+
+  public isMobile(){
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(navigator.userAgent)){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }

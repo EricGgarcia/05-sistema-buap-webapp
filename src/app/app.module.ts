@@ -35,6 +35,7 @@ import { PerfilUsuarioScreenComponent } from './screens/perfil-usuario-screen/pe
 import { TiendasScreenComponent } from './screens/tiendas-screen/tiendas-screen.component';
 import { JuegoTerminadoScreenComponent } from './screens/juego-terminado-screen/juego-terminado-screen.component';
 import { JuegoScreenComponent } from './screens/juego-screen/juego-screen.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { JuegoScreenComponent } from './screens/juego-screen/juego-screen.compon
     MatCheckboxModule,
     NgxMaskDirective,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [
     provideNgxMask()
