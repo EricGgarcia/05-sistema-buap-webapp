@@ -63,6 +63,7 @@ export class RegistroScreenComponent implements OnInit{
       this.facadeService.registrarUser(this.user).subscribe(
         (response)=>{
           alert("Usuario registrado correctamente")
+          this.router.navigate(["home"]);
           //this.loginUser(this.user.email, this.user.password);
         }, (error)=>{
           alert("No se pudo iniciar sesión");
@@ -72,7 +73,7 @@ export class RegistroScreenComponent implements OnInit{
     }else{
       alert("Por favor acepta los términos y condiciones");
     }
-    this.router.navigate(["home"]);
+
   }
 
   public loginUser(username: string, password: string){
